@@ -3,7 +3,7 @@ const Event = require("../../Structure/Event")
 
 module.exports = new Event("ready", async (bot, message) => {
 
-  const db = bot.db;
+  const db = bot.db; 
 
   await SlashCommand(bot);
 
