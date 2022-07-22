@@ -6,7 +6,7 @@ const Command = require("./Command");
 const Event = require("./Event");
 const InviteEvent = require("./InviteEvent");
 
-class Client extends Discord.Client {
+class Client extends Discord.Client { 
 
     constructor(options) {
 
