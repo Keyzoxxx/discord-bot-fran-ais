@@ -3,7 +3,6 @@ const fs = require("fs")
 const InviteTracker = require("@androz2091/discord-invites-tracker");
 const intents = new Discord.Intents(32767);
 const Command = require("./Command");
-const Database = require("./Database");
 const Event = require("./Event");
 const InviteEvent = require("./InviteEvent");
 
@@ -20,7 +19,6 @@ class Client extends Discord.Client {
         this.commands = new Discord.Collection()
         this.alias = new Discord.Collection()
         this.snipe = new Map()
-        this.db = Database;
         this.color = "#00feff";
         this.tracker = InviteTracker.init(this, {
             fetchGuilds: true,
