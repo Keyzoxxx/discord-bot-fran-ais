@@ -19,22 +19,13 @@ module.exports = new Event("ready", async (bot, message) => {
   
   setInterval(async () => {
 
-    db.query(`SELECT * FROM temp`, async (err, req) => {
+    async (err, req) => {
 
       if(req.length < 1) return;
 
       for(let i = 0; i < req.length; i++) {
 
-        if(Date.now() < parseInt(req[i].time)) return;
-
-        if(req[i].sanctionID.startsWith("BAN")) {
-
-          try {
-
-            bot.guilds.cache.get(req[i].guildID).members.unban(req[i].userID)
-            db.query(`DELETE FROM temp WHERE sanctionID = '${req[i].sanctionID}'`)
-
-          } catch (err) {}
+        if(Date.now() < parseInt(req[i].time))
         }
       }
   })
