@@ -1,6 +1,5 @@
 const Discord = require("discord.js")
 const Event = require("../../Structure/Event")
-const SlashCommand = require("../../Structure/SlashCommand")
 
 module.exports = new Event("ready", async (bot, message) => {
 
