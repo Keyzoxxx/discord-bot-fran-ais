@@ -94,7 +94,7 @@ fs.readdirSync("./Events/").filter(dir => dir === "Invite").forEach(dirs => {
 });
 console.log(`  ╚══════════════════════════════════════`)
 
-this.login(token)
+this.login(process.env.TOKEN)
 }
 }
 
